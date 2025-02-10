@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class ChatController {
 
     @GetMapping("/chat")
-    public String showChat(@RequestParam String userId,  Model model){
+    public String showChat(String userId,  Model model){
         User user = Chat.members.get(userId);
         if (user == null){
             return "redirect:/login";
